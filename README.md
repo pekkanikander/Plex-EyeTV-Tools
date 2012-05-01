@@ -12,6 +12,9 @@ preferences.)
 Tested only on Mac OS X, Snow Leopard and Lion.  Feel free to fork and
 contribute Windows patches (as Github pull requests).
 
+NOTE!  This is ALPHA software.  Not functional yet.  Only meant for
+testing purposes, may damage you Plex installation.
+
 (Planned) Features
 ==================
 
@@ -35,14 +38,14 @@ following commands in Terminal.app:
     python setup.py install
 
 If you don't have `git` installed, you should be able install one from
-Google Code: http://code.google.com/p/git-osx-installer/  Note though
+[Google Code](http://code.google.com/p/git-osx-installer/).  Note though
 that I haven't tested that myself, as I use
-[[http://mxcl.github.com/homebrew/|Homebrew]] to install 
-[[http://git-scm.com|git]].
+[Homebrew](http://mxcl.github.com/homebrew/) to install
+[git](http://git-scm.com).
  
 
 Developer documentation
 =======================
 
-All code resides in the bundle.  The scanners are thin API plugs so
+All code resides in the bundle.  The scanners are thin API facades so
 that Plex finds them, but the real code is in the bundle.
