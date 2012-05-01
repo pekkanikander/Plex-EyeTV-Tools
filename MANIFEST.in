@@ -1,0 +1,3 @@
+include README.md
+recursive-include 'EyeTV Info.bundle'
+orecursive-include 'Scanners'
