@@ -17,9 +17,9 @@ def Scan(path, files, mediaList, subdirs):
                     except: pass
                     try: duration = pl['epg info']['DURATION']
                     except: pass
-                    if (genre == "!Movie" or 
-                        (genre == "!Children" and duration > 50 * 60) or
-                        (genre == "!Documentary" and duration > 50 * 60)):
+                    if (genre != "!Movie" and
+                        (genre != "!Children" or duration <= 50 * 60) and
+                        (genre != "!Documentary" or duration <= 50 * 60)):
                         OkRecording = True
                         
             if OkRecording and recording:
