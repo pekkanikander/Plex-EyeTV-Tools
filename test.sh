@@ -9,9 +9,34 @@ scan() {
     "${SCANNER}" ${SCANNER_OTIONS} "$@"
 }
 
+renew-files() {
+    for i in test-data/*/*; do touch "$i"; done
+    A_SIZE=`du video-samples/SampleA.mpg | cut -f1`
+    B_SIZE=`du video-samples/SampleB.mpg | cut -f1`
+    for i in test-data/*; do
+        SIZE=`du "$i"/*.mpg 2>/dev/null | cut -f1`
+        rm -f "$i"/*.mpg
+        if [ $SIZE -eq $A_SIZE ] 2>/dev/null; then
+            cp video-samples/SampleB.mpg "$i"
+        else
+            cp video-samples/SampleA.mpg "$i"
+        fi
+    done
+}
+
 testit() {
     python setup.py install
+    tail -q -F "$HOME/Library/Logs/Plex Media Scanner.log" | cut -c1-120 &
+    TAIL1="$!"
+    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/com.plexapp.system.log" | cut -c1-120 &
+    TAIL2="$!"
+    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/fi.iki.pnr.plex.agents.eyetv_info.log" | cut -c1-120 &
+    TAIL3="$!"
     # TODO: The following is silly
-    scan --section 6 --scan
+    echo "===================================STARTING3========================================="
+    scan --section 6 --force --scan
+    sleep 1
+    echo "===================================ENDING3==========================================="
+    kill $TAIL1 $TAIL2 $TAIL3
 }
     

@@ -1,3 +1,6 @@
+# Video sample changing in test-data
+test-data/*/*.mpg
+
 *.py[co]
 
 # Packages
