@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EyeTV UUID</key>
+	<string>8C947A35-828D-4653-9F0A-664C2D20CA8C</string>
+	<key>actual duration</key>
+	<real>4228.8000000000002</real>
+	<key>actual start time</key>
+	<date>2007-12-24T09:23:00Z</date>
+	<key>aspect ratio</key>
+	<real>0.0</real>
+	<key>channel name</key>
+	<string>MTV3 D</string>
+	<key>channel number</key>
+	<string>3</string>
+	<key>display title</key>
+	<string>Barbie: Mermaidia - Elina lähtee Mermaidiaan pelastamaan ystäväänsä Nalua, joka on kidnapattu sinne juonia hautovanLavernan toimesta. Laverna haluaisia tehdän itsestään entistä voimakkaamman keijun Nalun avulla. - Suomeksi puhuttu kaikkien tyttömieli</string>
+	<key>format</key>
+	<integer>2</integer>
+	<key>has video</key>
+	<true/>
+	<key>height</key>
+	<integer>576</integer>
+	<key>id</key>
+	<integer>220180980</integer>
+	<key>info</key>
+	<dict>
+		<key>description</key>
+		<string></string>
+		<key>duration</key>
+		<real>4500</real>
+		<key>enabled</key>
+		<true/>
+		<key>episode title</key>
+		<string>Elina lähtee Mermaidiaan pelastamaan ystäväänsä Nalua, joka on kidnapattu sinne juonia hautovanLavernan toimesta. Laverna haluaisia tehdän itsestään entistä voimakkaamman keijun Nalun avulla. - Suomeksi puhuttu kaikkien tyttömieli</string>
+		<key>recording title</key>
+		<string>Barbie: Mermaidia</string>
+		<key>repeat days</key>
+		<integer>0</integer>
+		<key>repeats</key>
+		<string>never</string>
+		<key>source info</key>
+		<dict>
+			<key>channel number</key>
+			<integer>0</integer>
+			<key>input source</key>
+			<string>tuner</string>
+			<key>psip major</key>
+			<integer>0</integer>
+			<key>psip minor</key>
+			<integer>0</integer>
+			<key>service</key>
+			<data>
+			AAAAAJAEARKIBE2QGAAAMQAAAAA=
+			</data>
+			<key>station name</key>
+			<string></string>
+			<key>tuner source</key>
+			<string>cable</string>
+		</dict>
+		<key>start</key>
+		<date>2007-12-24T09:23:00Z</date>
+		<key>title</key>
+		<string>Elina lähtee Mermaidiaan pelastamaan ystäväänsä Nalua, joka on kidnapattu sinne juonia hautovanLavernan toimesta. Laverna haluaisia tehdän itsestään entistä voimakkaamman keijun Nalun avulla. - Suomeksi puhuttu kaikkien tyttömieli</string>
+		<key>video bitrate</key>
+		<integer>2300</integer>
+	</dict>
+	<key>isUnplayed</key>
+	<false/>
+	<key>lastPlaybackDate</key>
+	<date>2011-10-04T12:19:27Z</date>
+	<key>markers</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>170510400</integer>
+		<integer>170510400</integer>
+		<integer>244382400</integer>
+		<integer>244382400</integer>
+		<integer>380376000</integer>
+		<integer>380376000</integer>
+	</array>
+	<key>playbackPosition</key>
+	<real>0.0</real>
+	<key>postpad</key>
+	<real>0.0</real>
+	<key>prepad</key>
+	<real>0.0</real>
+	<key>pulldown pattern index</key>
+	<integer>-1</integer>
+	<key>pulldown type</key>
+	<integer>0</integer>
+	<key>shouldWiFiShare</key>
+	<true/>
+	<key>teletext page</key>
+	<integer>0</integer>
+	<key>width</key>
+	<integer>1024</integer>
+</dict>
+</plist>

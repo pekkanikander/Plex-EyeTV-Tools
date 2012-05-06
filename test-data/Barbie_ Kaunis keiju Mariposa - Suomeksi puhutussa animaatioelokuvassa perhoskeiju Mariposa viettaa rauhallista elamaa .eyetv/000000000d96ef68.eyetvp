@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>display title</key>
+	<string>Barbie: Kaunis keiju Mariposa</string>
+	<key>epg info</key>
+	<dict>
+		<key>ABSTRACT</key>
+		<string>Suomeksi puhutussa animaatioelokuvassa perhoskeiju Mariposa viettää rauhallista elämää kotonaan kauniilla Perhosniityllä, kun yhtäkkiä kaikki muuttuu. Kuningatar Marabella sairastuu, ja Mariposan sekä hänen ystäviensä </string>
+		<key>ACTORS</key>
+		<string></string>
+		<key>AUDIO</key>
+		<string></string>
+		<key>CHANNELID</key>
+		<integer>40720585064497</integer>
+		<key>COLOR</key>
+		<integer>6</integer>
+		<key>CONTENT</key>
+		<string>Children's</string>
+		<key>COUNTRY</key>
+		<string></string>
+		<key>DESCRIPTION</key>
+		<string></string>
+		<key>DIRECTOR</key>
+		<string></string>
+		<key>DURATION</key>
+		<integer>4800</integer>
+		<key>EPISODECOUNT</key>
+		<integer>0</integer>
+		<key>EPISODENUM</key>
+		<string></string>
+		<key>FORMAT</key>
+		<integer>0</integer>
+		<key>FSK</key>
+		<integer>0</integer>
+		<key>FV_RATING</key>
+		<string></string>
+		<key>IMAGECOPYRIGHT</key>
+		<string></string>
+		<key>IMAGENAME</key>
+		<string></string>
+		<key>LANGUAGE</key>
+		<string></string>
+		<key>MPAA_RATING</key>
+		<string></string>
+		<key>OTHERS</key>
+		<string></string>
+		<key>OTHER_RATING</key>
+		<string></string>
+		<key>PROGID</key>
+		<integer>222</integer>
+		<key>SERIESID</key>
+		<integer>0</integer>
+		<key>SOURCEID</key>
+		<integer>4</integer>
+		<key>STARTTIME</key>
+		<integer>228042900</integer>
+		<key>STAR_RATING</key>
+		<string></string>
+		<key>STOPTIME</key>
+		<integer>228047700</integer>
+		<key>SUBTITLE</key>
+		<string></string>
+		<key>SUBTITLING</key>
+		<string></string>
+		<key>TIP</key>
+		<integer>0</integer>
+		<key>TITLE</key>
+		<string>Barbie: Kaunis keiju Mariposa</string>
+		<key>TVTVLTEXT</key>
+		<string></string>
+		<key>TV_RATING</key>
+		<string></string>
+		<key>UNIQUEID</key>
+		<integer>4147546624</integer>
+		<key>VIDEO</key>
+		<string>!Children</string>
+		<key>YEAR</key>
+		<string></string>
+	</dict>
+	<key>epg provider channel id</key>
+	<integer>40720585064497</integer>
+	<key>epg provider id</key>
+	<integer>4</integer>
+	<key>epg provider program id</key>
+	<integer>222</integer>
+	<key>epg provider unique id</key>
+	<integer>4147546624</integer>
+	<key>id</key>
+	<integer>227995496</integer>
+	<key>info</key>
+	<dict>
+		<key>description</key>
+		<string></string>
+		<key>duration</key>
+		<real>5194.0799999999999</real>
+		<key>enabled</key>
+		<true/>
+		<key>repeat days</key>
+		<integer>0</integer>
+		<key>repeats</key>
+		<string>never</string>
+		<key>source info</key>
+		<dict>
+			<key>channel number</key>
+			<integer>0</integer>
+			<key>input source</key>
+			<string>tuner</string>
+			<key>psip major</key>
+			<integer>0</integer>
+			<key>psip minor</key>
+			<integer>0</integer>
+			<key>service</key>
+			<data>
+			AAAAAJAEARKIBE2QGAAAMQAAAAA=
+			</data>
+			<key>station name</key>
+			<string></string>
+			<key>tuner source</key>
+			<string>cable</string>
+		</dict>
+		<key>start</key>
+		<date>2008-03-24T09:13:00Z</date>
+		<key>title</key>
+		<string>Barbie: Kaunis keiju Mariposa</string>
+		<key>video bitrate</key>
+		<integer>2300</integer>
+	</dict>
+</dict>
+</plist>

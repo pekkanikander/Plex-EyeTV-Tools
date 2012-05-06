@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EyeTV UUID</key>
+	<string>8C947A35-828D-4653-9F0A-664C2D20CA8C</string>
+	<key>actual duration</key>
+	<real>4211.7600000000002</real>
+	<key>actual start time</key>
+	<date>2008-05-09T06:58:00Z</date>
+	<key>aspect ratio</key>
+	<real>0.0</real>
+	<key>channel name</key>
+	<string>TV1000 Family</string>
+	<key>channel number</key>
+	<string>72</string>
+	<key>display title</key>
+	<string>Barbie Diaries - Barbie: Diaries</string>
+	<key>format</key>
+	<integer>2</integer>
+	<key>has video</key>
+	<true/>
+	<key>height</key>
+	<integer>576</integer>
+	<key>id</key>
+	<integer>232009080</integer>
+	<key>info</key>
+	<dict>
+		<key>description</key>
+		<string>High schoolia käyvällä Barbiella on edessään kiireinen lukuvuosi - varsinkin kun hän menee ihastumaan söpöön koulukaveriinsa. Sitten Barbie löytää lumotun onnenkorun ja päiväkirjan. </string>
+		<key>duration</key>
+		<real>4200</real>
+		<key>enabled</key>
+		<true/>
+		<key>episode title</key>
+		<string>Barbie: Diaries</string>
+		<key>recording title</key>
+		<string>Barbie Diaries</string>
+		<key>repeat days</key>
+		<integer>0</integer>
+		<key>repeats</key>
+		<string>never</string>
+		<key>source info</key>
+		<dict>
+			<key>channel number</key>
+			<integer>0</integer>
+			<key>input source</key>
+			<string>tuner</string>
+			<key>psip major</key>
+			<integer>0</integer>
+			<key>psip minor</key>
+			<integer>0</integer>
+			<key>service</key>
+			<data>
+			AAAAAJAEARKIBWbQGAAMJgAAAAA=
+			</data>
+			<key>station name</key>
+			<string></string>
+			<key>tuner source</key>
+			<string>cable</string>
+		</dict>
+		<key>start</key>
+		<date>2008-05-09T06:58:00Z</date>
+		<key>title</key>
+		<string>Barbie: Diaries</string>
+		<key>video bitrate</key>
+		<integer>2300</integer>
+	</dict>
+	<key>isUnplayed</key>
+	<false/>
+	<key>lastPlaybackDate</key>
+	<date>2011-09-07T11:47:07Z</date>
+	<key>markers</key>
+	<array>
+		<integer>0</integer>
+		<integer>0</integer>
+		<integer>379058400</integer>
+		<integer>379058400</integer>
+	</array>
+	<key>playbackPosition</key>
+	<real>0.0</real>
+	<key>postpad</key>
+	<real>0.0</real>
+	<key>prepad</key>
+	<real>0.0</real>
+	<key>pulldown pattern index</key>
+	<integer>-1</integer>
+	<key>pulldown type</key>
+	<integer>0</integer>
+	<key>selected audio pid</key>
+	<integer>3115</integer>
+	<key>shouldWiFiShare</key>
+	<true/>
+	<key>teletext page</key>
+	<integer>0</integer>
+	<key>width</key>
+	<integer>768</integer>
+</dict>
+</plist>
