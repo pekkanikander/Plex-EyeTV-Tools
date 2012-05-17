@@ -1,44 +1,48 @@
-import re, os, os.path, sys
-import Media, UnicodeHelper, unicodedata, plistlib
+import Media, plistlib
 
-class Scanner(object):
+recdSuffix  = ".eyetv"
+metaSuffix  = ".eyetvp"
+liveSuffix  = "Live TV Buffer.eyetv"
+videoSuffix = ".mpg"  # Use .m4v if you needed
 
-    suffix     = ".eyetv"
-    liveSuffix = "Live TV Buffer.eyetv"
+def Scan(path, files, mediaList, subdirs, isOfGenre):
+    """Scans the path for an EyeTV recording of the given genre.
+    
+    An EyeTV recording consists of the actual video file(s) and a set
+    of metadata files.  First makes sure that the given files do exist.
+    Then inspect the metadata to see if the recording belongs to the
+    desired genre.
 
-    def __init__(self, type='Movie'):
-        self.type = type
+    isOfGenre is a function that takes a plist as its argument.
+    
+    """
 
-    def Scan(self, path, files, mediaList, subdirs):
-        recording = None
-        if len(files) < 1:
-            return
-        if path.endswith(self.suffix) and not path.endswith(self.liveSuffix):
-            recording = self.FindRecording(path, files)
+    if len(files) < 1:
+        return
+    if path.endswith(recdSuffix) and not path.endswith(liveSuffix):
+        recording = FindRecording(files, isOfGenre)
         if recording:
-            movie = Media.Movie(path.split('/')[-1])
+            movie = Media.Movie(path.split('/')[-1]) # Last part of the path
             movie.parts.append(recording)
             mediaList.append(movie)
 
-    def FindRecording(self, path, files):
-        OkRecording = None
-        recording = None
-        genre = None
-        duration = 0
+def FindRecording(files, isOfGenre):
+    """Attempts to locate a recording of the given genre among files.
 
-        for file in files:
-            if file.endswith(".mpg"):
-                recording = file
-            if file.endswith(".eyetvp"):
-                pl = plistlib.readPlist(file)
-                try: genre = pl['epg info']['VIDEO']
-                except: pass
-                try: duration = pl['epg info']['DURATION']
-                except: pass
-                if (genre == "!Movie" or 
-                    (genre == "!Children" and duration > 50 * 60) or
-                    (genre == "!Documentary" and duration > 50 * 60)):
-                    OkRecording = True
+    Scan for a video file and metadata file, and then apply isOfGenre
+    on the plist read from the metadata file.
+    """
+    recording = None
+    metadata  = None
 
-        return recording if OkRecording else None
+    for file in files:
+        if file.endswith(videoSuffix):
+            recording = file
+        if file.endswith(metaSuffix):
+            metadata  = file
+        if recording and metadata:
+            if isOfGenre(plistlib.readPlist(metadata)):
+                return recording
+
+    return None
                         

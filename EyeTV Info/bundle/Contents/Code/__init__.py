@@ -1,6 +1,8 @@
 import datetime, time, os, re, os.path, glob, plistlib, unicodedata, hashlib, urlparse, types, urllib
 
-class eyetvnfo(Agent.Movies):
+import criteria
+
+class eyetvinfo(Agent.Movies):
     name = 'EyeTV File Info'
     primary_provider = True
     languages = [Locale.Language.English]
@@ -23,11 +25,11 @@ class eyetvnfo(Agent.Movies):
 
         for pfile in glob.glob1(path, '*.eyetvr'):
             Log("R: " + pfile)
-        plr = plistlib.readPlist(path + "/" + pfile)
+        plistr = plistlib.readPlist(path + "/" + pfile)
 
         for pfile in glob.glob1(path, '*.eyetvp'):
             Log("P: " + pfile)
-        plp = plistlib.readPlist(path + "/" + pfile)
+        plistp = plistlib.readPlist(path + "/" + pfile)
 
         thumbnail = None
         # Doesn't seem to work with tiff...
@@ -36,31 +38,31 @@ class eyetvnfo(Agent.Movies):
         #    thumbnail = path + '/' + tfile
 
         # Movie year from eyetvp, if available
-        year = plp['epg info']['YEAR']
+        year = plistp['epg info']['YEAR']
         metadata.year = year if year else metadata.year
 
         # Recording Name
-        try: metadata.title = plr['info']['recording title'].encode('utf-8')
+        try: metadata.title = plistr['info']['recording title'].encode('utf-8')
         except: pass
 
         # Recording Tag Line
-        try: metadata.tagline = str(date) + ':  ' + str(plr['display title'].encode('utf-8'))
+        try: metadata.tagline = str(date) + ':  ' + str(plistr['display title'].encode('utf-8'))
         except: pass
 
         # Recording Description
-        try: metadata.summary = plr['info']['description'].encode('utf-8')
+        try: metadata.summary = plistr['info']['description'].encode('utf-8')
         except: pass
 
         if not metadata.summary:
-            try: metadata.summary = plp['epg info']['ABSTRACT']
+            try: metadata.summary = plistp['epg info']['ABSTRACT']
             except: pass
 
         # Recording Studio / channel name (TODO: Something saner here?)
-        try: metadata.studio = plr['channel name'].encode('utf-8')
+        try: metadata.studio = plistr['channel name'].encode('utf-8')
         except: pass
 
         # Recording Duration
-        try: metadata.duration = int(plr['info']['duration']) * 1000
+        try: metadata.duration = int(plistr['info']['duration']) * 1000
         except: pass
 
         # Poster
@@ -70,7 +72,7 @@ class eyetvnfo(Agent.Movies):
 
         # Genre
         try:
-            genre = plp['epg info']['CONTENT']
+            genre = plistp['epg info']['CONTENT']
             if genre:
                 metadata.genres = [genre]
         except: pass
@@ -79,9 +81,13 @@ class eyetvnfo(Agent.Movies):
         
         # Directors -- avoid set of one empty string
         try: 
-            director = plp['epg info']['DIRECTOR']
+            director = plistp['epg info']['DIRECTOR']
             if director:
                 metadata.directors = [director]
         except: pass
 
         # Collections
+        metadata.collections = criteria.collections(plistp, plistr)
+
+        # Tags
+        # TBD

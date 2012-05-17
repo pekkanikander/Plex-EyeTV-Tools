@@ -26,17 +26,20 @@ renew-files() {
 
 testit() {
     python setup.py install
-    tail -q -F "$HOME/Library/Logs/Plex Media Scanner.log" | cut -c1-120 &
+    tail -q -F "$HOME/Library/Logs/Plex Media Scanner.log" | cut -c1-160 &
     TAIL1="$!"
-    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/com.plexapp.system.log" | cut -c1-120 &
+    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/com.plexapp.system.log" | 
+          cut -c1-160 &
     TAIL2="$!"
-    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/fi.iki.pnr.plex.agents.eyetv_info.log" | cut -c1-120 &
+    tail -q -F "$HOME/Library/Logs/PMS Plugin Logs/fi.iki.pnr.plex.agents.eyetv_info.log" | 
+          cut -c1-160 &
     TAIL3="$!"
+    sleep 1
     # TODO: The following is silly
-    echo "===================================STARTING3========================================="
+    echo "=======================STARTING3========================================="
     scan --section 6 --force --scan
     sleep 1
-    echo "===================================ENDING3==========================================="
-    kill $TAIL1 $TAIL2 $TAIL3
+    echo "=======================ENDING3==========================================="
+    killall tail
 }
     
